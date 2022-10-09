@@ -1,0 +1,16 @@
+{
+	"name": "root",
+	"private": true,
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"build": "lerna run build",
+		"update": "taze major -w",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"lerna": "^5.6.1",
+		"nx": "^14.8.3",
+		"prettier": "^2.7.1",
+		"taze": "^0.8.2"
+	}
+}
