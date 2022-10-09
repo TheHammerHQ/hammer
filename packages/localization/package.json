@@ -1,5 +1,5 @@
 {
-	"name": "localization",
+	"name": "@hammerhq/localization",
 	"version": "0.0.0",
 	"main": "dist",
 	"typings": "dist",

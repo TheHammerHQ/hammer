@@ -1,5 +1,5 @@
 {
-	"name": "@hammerhq/logger",
+	"name": "@hammerhq/core",
 	"version": "0.0.0",
 	"main": "dist",
 	"typings": "dist",
@@ -8,7 +8,8 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"chalk": "^4.1.0"
+		"@hammerhq/logger": "*",
+		"reflect-metadata": "^0.1.13"
 	},
 	"devDependencies": {
 		"@types/node": "^18.8.3",

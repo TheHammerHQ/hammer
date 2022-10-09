@@ -1,12 +1,15 @@
 {
 	"name": "bot",
 	"version": "0.0.0",
+	"scripts": {
+		"dev": "ts-node src"
+	},
 	"dependencies": {
-		"localization": "*",
-		"logger": "*"
+		"@hammerhq/core": "*"
 	},
 	"devDependencies": {
 		"@types/node": "^18.8.3",
+		"ts-node": "^10.9.1",
 		"typescript": "^4.8.4"
 	}
 }
