@@ -18,10 +18,12 @@ export const resolvePlugin = async (Plugin: ILoadable) => {
 		await resolveService(service);
 	logger.success("Services resolved for plugin:", Plugin.name);
 
-	logger.event("Resolving events for plugin:", Plugin.name);
-	for (const event of options.events as ILoadable[])
-		await resolveEvent(event);
-	logger.success("Events resolved for plugin:", Plugin.name);
+	if (options.events) {
+		logger.event("Resolving events for plugin:", Plugin.name);
+		for (const event of options.events as ILoadable[])
+			await resolveEvent(event);
+		logger.success("Events resolved for plugin:", Plugin.name);
+	}
 
 	const params = Reflect.getMetadata(
 		"design:paramtypes",
