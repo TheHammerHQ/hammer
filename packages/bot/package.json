@@ -5,7 +5,8 @@
 		"dev": "ts-node src"
 	},
 	"dependencies": {
-		"@hammerhq/core": "*"
+		"@hammerhq/core": "*",
+		"discord.js": "^14.5.0"
 	},
 	"devDependencies": {
 		"@types/node": "^18.8.3",

@@ -2,10 +2,11 @@ import { logger, serviceCache } from "../globals";
 import { ETypes, TService } from "../types";
 
 export async function resolveService(Service: TService) {
+	if (serviceCache.has(Service.name)) return;
+
 	logger.event("Resolving service:", Service.name);
 
 	const type = Reflect.getMetadata("type", Service);
-
 	if (type != ETypes.SERVICE)
 		throw new Error("Invalid service, " + Service.name);
 

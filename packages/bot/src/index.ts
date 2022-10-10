@@ -1,18 +1,12 @@
-import { Service, Plugin, bootstrap } from "@hammerhq/core";
+import { bootstrap } from "@hammerhq/core";
+import { Client } from "discord.js";
+import { ExamplePlugin } from "./plugins/example/example.plugin";
 
-@Service()
-class MyService {}
-
-@Service()
-class MyOtherService {
-	constructor(private readonly service: MyService) {}
-}
-
-@Plugin({
-	services: [MyService],
-})
-class MyPlugin {}
+const client = new Client({
+	intents: ["GuildMembers", "GuildMessages"],
+});
 
 bootstrap({
-	plugins: [MyPlugin],
+	client,
+	plugins: [ExamplePlugin],
 });
