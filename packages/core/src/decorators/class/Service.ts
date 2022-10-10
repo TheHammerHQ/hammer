@@ -1,4 +1,4 @@
-import { ETypes, IServiceOptions } from "../../types";
+import { ELoadableTypes, IServiceOptions } from "../../types";
 import { ClassDecorator } from "../ClassDecorator";
 
-export const Service = ClassDecorator<IServiceOptions>(ETypes.SERVICE);
+export const Service = ClassDecorator<IServiceOptions>(ELoadableTypes.SERVICE);

@@ -1,6 +1,6 @@
 import { IBootstrapOptions } from "../types";
 import { eventCache, logger, pluginCache, serviceCache } from "../globals";
-import { resolvePlugin } from "./resolvePlugin";
+import { resolvePlugin } from "./resolvers/resolvePlugin";
 
 export const bootstrap = async ({ plugins }: IBootstrapOptions) => {
 	logger.event("Starting Core...");

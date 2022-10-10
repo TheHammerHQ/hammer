@@ -1,19 +1,18 @@
-import { logger, serviceCache } from "../globals";
-import { ETypes, TService } from "../types";
+import { checkType } from "src/utils/checkType";
+import { logger, serviceCache } from "../../globals";
+import { ELoadableTypes, ILoadable } from "../../types";
 
-export async function resolveService(Service: TService) {
+export async function resolveService(Service: ILoadable) {
 	if (serviceCache.has(Service.name)) return;
 
 	logger.event("Resolving service:", Service.name);
 
-	const type = Reflect.getMetadata("type", Service);
-	if (type != ETypes.SERVICE)
-		throw new Error("Invalid service, " + Service.name);
+	checkType(Service, ELoadableTypes.SERVICE);
 
 	const params = Reflect.getMetadata(
 		"design:paramtypes",
 		Service,
-	) as TService[];
+	) as ILoadable[];
 
 	if (params) for (const param of params) await resolveService(param);
 

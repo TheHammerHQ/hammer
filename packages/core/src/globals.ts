@@ -1,8 +1,8 @@
 import { Logger } from "@hammerhq/logger";
-import { TService } from "./types";
+import { ILoadable } from "./types";
 
 export const logger = new Logger("[CORE]:");
 
-export const pluginCache = new Map<string, TService>();
-export const serviceCache = new Map<string, TService>();
-export const eventCache = new Map<string, TService[]>();
+export const pluginCache = new Map<string, ILoadable>();
+export const serviceCache = new Map<string, ILoadable>();
+export const eventCache = new Map<string, ILoadable[]>();

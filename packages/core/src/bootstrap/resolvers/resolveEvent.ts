@@ -1,16 +1,16 @@
-import { eventCache, logger, serviceCache } from "../globals";
-import { ETypes, IEventOptions, TService } from "../types";
+import { checkType } from "src/utils/checkType";
+import { eventCache, logger, serviceCache } from "../../globals";
+import { ELoadableTypes, IEventOptions, ILoadable } from "../../types";
 
-export async function resolveEvent(Event: TService) {
+export async function resolveEvent(Event: ILoadable) {
 	logger.event("Resolving service:", Event.name);
 
-	const type = Reflect.getMetadata("type", Event);
-	if (type != ETypes.EVENT) throw new Error("Invalid event, " + Event.name);
+	checkType(Event, ELoadableTypes.EVENT);
 
 	const params = Reflect.getMetadata(
 		"design:paramtypes",
 		Event,
-	) as TService[];
+	) as ILoadable[];
 
 	if (params) {
 		for (const param of params) {
