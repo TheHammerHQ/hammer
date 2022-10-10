@@ -1,5 +1,5 @@
 import { Logger } from "@hammerhq/logger";
-import { ILoadable } from "./types";
+import { ILoadable } from "../types";
 
 export const logger = new Logger("[CORE]:");
 

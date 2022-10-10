@@ -1,5 +1,5 @@
-import { checkType } from "src/utils/checkType";
-import { logger, pluginCache, serviceCache } from "../../globals";
+import { checkType } from "../../utils/checkType";
+import { logger, pluginCache, serviceCache } from "../../utils/globals";
 import { ELoadableTypes, ILoadable } from "../../types";
 import { resolveEvent } from "./resolveEvent";
 import { resolveService } from "./resolveService";
@@ -38,6 +38,8 @@ export const resolvePlugin = async (Plugin: ILoadable) => {
 	const instance = new Plugin(
 		...(params || []).map((param) => serviceCache.get(param.name)),
 	);
+
+	Reflect.defineMetadata("options", options, instance);
 
 	if (instance.onLoad) await instance.onLoad();
 

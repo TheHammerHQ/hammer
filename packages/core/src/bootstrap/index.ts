@@ -1,9 +1,18 @@
+import { setClient } from "../utils/client";
 import { IBootstrapOptions } from "../types";
-import { eventCache, logger, pluginCache, serviceCache } from "../globals";
+import {
+	eventCache,
+	logger,
+	pluginCache,
+	serviceCache,
+} from "../utils/globals";
 import { resolvePlugin } from "./resolvers/resolvePlugin";
+import { loadEvent } from "./loaders/loadEvent";
 
-export const bootstrap = async ({ plugins }: IBootstrapOptions) => {
-	logger.event("Starting Core...");
+export const bootstrap = async ({ plugins, client }: IBootstrapOptions) => {
+	logger.event("Bootstrapping Core...");
+
+	setClient(client);
 
 	try {
 		logger.event("Resolving plugins...");
@@ -14,7 +23,12 @@ export const bootstrap = async ({ plugins }: IBootstrapOptions) => {
 		process.exit(1);
 	}
 
-	logger.success("Core started!");
+	logger.event("Loading events...");
+	for (const eventName of eventCache.keys())
+		loadEvent(eventName, eventCache.get(eventName) || []);
+	logger.success("Events loaded!");
+
+	logger.success("Core bootstrapped!");
 
 	const res = {
 		pluginCache,

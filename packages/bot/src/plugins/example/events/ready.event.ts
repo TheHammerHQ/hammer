@@ -1,5 +1,6 @@
-import { Event } from "@hammerhq/core";
-import { Client } from "discord.js";
+import { Event, Client, Logger } from "@hammerhq/core";
+import { Logger as HammerLogger } from "@hammerhq/logger";
+import { Client as DJSClient } from "discord.js";
 import { MathsService } from "../services/maths.service";
 
 @Event({
@@ -7,13 +8,20 @@ import { MathsService } from "../services/maths.service";
 	once: true,
 })
 export class ReadyEvent {
+	@Client()
+	client!: DJSClient;
+
+	@Logger("[ReadyEvent]:")
+	logger!: HammerLogger;
+
 	constructor(public readonly mathsService: MathsService) {}
 
 	onLoad() {
+		this.logger.success("loaded!");
 		this.mathsService.add(5, 15);
 	}
 
-	execute(client: Client) {
-		console.log(`Logged in as ${client.user?.tag}!`);
+	execute() {
+		console.log(`Logged in as ${this.client.user?.tag}!`);
 	}
 }

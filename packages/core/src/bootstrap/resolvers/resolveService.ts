@@ -1,5 +1,5 @@
-import { checkType } from "src/utils/checkType";
-import { logger, serviceCache } from "../../globals";
+import { checkType } from "../../utils/checkType";
+import { logger, serviceCache } from "../../utils/globals";
 import { ELoadableTypes, ILoadable } from "../../types";
 
 export async function resolveService(Service: ILoadable) {
@@ -21,6 +21,10 @@ export async function resolveService(Service: ILoadable) {
 	);
 
 	if (instance.onLoad) await instance.onLoad();
+
+	const options = Reflect.getMetadata("options", Service);
+
+	Reflect.defineMetadata("options", options, instance);
 
 	serviceCache.set(Service.name, instance);
 

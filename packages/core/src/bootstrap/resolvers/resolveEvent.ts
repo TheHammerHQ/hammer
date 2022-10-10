@@ -1,9 +1,9 @@
-import { checkType } from "src/utils/checkType";
-import { eventCache, logger, serviceCache } from "../../globals";
+import { checkType } from "../../utils/checkType";
+import { eventCache, logger, serviceCache } from "../../utils/globals";
 import { ELoadableTypes, IEventOptions, ILoadable } from "../../types";
 
 export async function resolveEvent(Event: ILoadable) {
-	logger.event("Resolving service:", Event.name);
+	logger.event("Resolving event:", Event.name);
 
 	checkType(Event, ELoadableTypes.EVENT);
 
@@ -26,6 +26,8 @@ export async function resolveEvent(Event: ILoadable) {
 	if (instance.onLoad) await instance.onLoad();
 
 	const options = Reflect.getMetadata("options", Event) as IEventOptions;
+
+	Reflect.defineMetadata("options", options, instance);
 
 	const events = eventCache.get(options.name) || [];
 	events.push(instance);
