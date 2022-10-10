@@ -1,6 +1,7 @@
 import { bootstrap } from "@hammerhq/core";
 import { Client } from "discord.js";
 import { CONFIG } from "./config";
+import { ConfigurablePlugin } from "./plugins/configurable/configurable.plugin";
 import { ExamplePlugin } from "./plugins/example/example.plugin";
 
 const client = new Client({
@@ -16,7 +17,12 @@ const client = new Client({
 async function main() {
 	await bootstrap({
 		client,
-		plugins: [ExamplePlugin],
+		plugins: [
+			ExamplePlugin,
+			ConfigurablePlugin.forRoot({
+				foo: "bar",
+			}),
+		],
 	});
 
 	await client.login(CONFIG.BOT_TOKEN);
