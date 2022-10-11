@@ -3,5 +3,8 @@
 	"useNx": true,
 	"version": "0.1.0-alpha.0",
 	"packages": ["packages/*"],
-	"npmClient": "yarn"
+	"npmClient": "yarn",
+	"publishConfig": {
+		"access": "public"
+	}
 }

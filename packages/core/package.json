@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/core",
-	"version": "0.1.0-alpha.0",
+	"version": "0.0.0",
 	"main": "dist",
 	"typings": "dist",
 	"author": {
@@ -36,3 +36,4 @@
 		"typescript": "^4.8.4"
 	}
 }
+
