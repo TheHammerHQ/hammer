@@ -34,5 +34,10 @@
 		"@types/node": "^18.8.4",
 		"rimraf": "^3.0.2",
 		"typescript": "^4.8.4"
-	}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"gitHead": "b0d26aa1ad7f980031d6867e8a262b6481203b87"
 }
+
