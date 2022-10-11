@@ -1,8 +1,29 @@
 {
 	"name": "@hammerhq/localization",
 	"version": "0.0.0",
+	"description": "✨ YAML based localization system for everyone!",
 	"main": "dist",
 	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
+	"author": {
+		"email": "hi@338.rocks",
+		"name": "Barış DEMİRCİ",
+		"url": "https://338.rocks"
+	},
+	"license": "GPL-3.0",
+	"private": false,
+	"keywords": [
+		"hammer",
+		"localization",
+		"i18n",
+		"yaml",
+		"yaml-based",
+		"language",
+		"multi-language"
+	],
 	"scripts": {
 		"prebuild": "rimraf dist",
 		"build": "tsc"
@@ -16,3 +37,4 @@
 		"typescript": "^4.8.4"
 	}
 }
+

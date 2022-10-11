@@ -1,8 +1,27 @@
 {
 	"name": "@hammerhq/logger",
 	"version": "0.0.0",
+	"description": "😎 Cool looking logs for everyone!",
 	"main": "dist",
 	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
+	"author": {
+		"email": "hi@338.rocks",
+		"name": "Barış DEMİRCİ",
+		"url": "https://338.rocks"
+	},
+	"license": "GPL-3.0",
+	"private": false,
+	"keywords": [
+		"hammer",
+		"log",
+		"logger",
+		"configurable",
+		"mock"
+	],
 	"scripts": {
 		"prebuild": "rimraf dist",
 		"build": "tsc"
@@ -16,3 +35,4 @@
 		"typescript": "^4.8.4"
 	}
 }
+
