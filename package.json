@@ -2,7 +2,7 @@
 	"name": "root",
 	"private": true,
 	"scripts": {
-		"bootstrap": "lerna bootstrap",
+		"bootstrap": "lerna bootstrap --force-local",
 		"build": "lerna run build",
 		"update": "taze major -w",
 		"format": "prettier --write ."

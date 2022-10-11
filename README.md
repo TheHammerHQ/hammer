@@ -13,10 +13,12 @@ Hammer is still in development, you can join waitlist [here](https://hammer.338.
 
 # 🚧 TODO
 
--   [ ] Increase the stability of the core package
--   [ ] Implement localization package to core (like logger package)
--   [ ] Create plugin template
+-   [x] Implement localization package to core (like logger package)
+-   [x] Implement http plugin
+-   [x] Create plugin template
+-   [ ] Update sidra package
 -   [ ] Add more documentation
+-   [ ] Increase the stability of the core package
 
 # 🧦 Looking For Contributors
 

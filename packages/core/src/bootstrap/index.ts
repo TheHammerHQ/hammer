@@ -8,10 +8,17 @@ import {
 } from "../utils/globals";
 import { resolvePlugin } from "./resolvers/resolvePlugin";
 import { loadEvent } from "./loaders/loadEvent";
+import { I18n } from "@hammerhq/localization";
+import { setI18n } from "../utils/localization";
 
-export const bootstrap = async ({ plugins, client }: IBootstrapOptions) => {
+export const bootstrap = async ({
+	plugins,
+	client,
+	i18n,
+}: IBootstrapOptions) => {
 	logger.event("Bootstrapping Core...");
 
+	setI18n(new I18n(i18n));
 	setClient(client);
 
 	try {

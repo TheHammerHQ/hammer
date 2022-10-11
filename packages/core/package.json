@@ -26,7 +26,8 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/logger": "^0.1.0-alpha.0",
+		"@hammerhq/localization": "*",
+		"@hammerhq/logger": "*",
 		"discord.js": "^14.6.0",
 		"reflect-metadata": "^0.1.13"
 	},
