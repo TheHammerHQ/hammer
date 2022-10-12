@@ -1,6 +1,9 @@
 import { Event, Client, Logger } from "@hammerhq/core";
 import { Logger as HammerLogger } from "@hammerhq/logger";
 import { Client as DJSClient, Message } from "discord.js";
+import { Server } from "@hammerhq/plugin-http";
+import { Server as HTTPServer } from "http";
+import { AddressInfo } from "net";
 
 @Event({
 	name: "messageCreate",
@@ -12,6 +15,9 @@ export class MessageCreateEvent {
 
 	@Logger("[MessageCreateEvent]:")
 	logger!: HammerLogger;
+
+	@Server()
+	server!: HTTPServer;
 
 	onLoad() {
 		this.logger.success("loaded!");
@@ -32,6 +38,11 @@ export class MessageCreateEvent {
 				break;
 			case "say":
 				message.reply(args.join(" ") || "No args provided");
+				break;
+			case "http-port":
+				message.reply(
+					`:hammer: ${(this.server.address() as AddressInfo).port}`,
+				);
 				break;
 		}
 	}

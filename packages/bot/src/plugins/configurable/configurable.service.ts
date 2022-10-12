@@ -1,4 +1,4 @@
-import { Service, Config } from "@hammerhq/core/dist";
+import { Service, Config } from "@hammerhq/core";
 
 export interface IConfig {
 	foo: string;

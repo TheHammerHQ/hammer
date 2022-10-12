@@ -1,22 +1,30 @@
+import "reflect-metadata";
+
 import { Plugin } from "@hammerhq/core";
-import { Bootstrap } from "sidra";
-import express from "express";
+import { IHTTPPluginOptions } from "./types";
+import { bootstrap } from "./Bootstrap";
 
-export * from "sidra";
+export * from "./Controller";
+export * from "./Method";
+export * from "./Middleware";
+export * from "./ParamDecorator";
+export * from "./global";
+export * from "./Bootstrap";
+export * from "./types";
+export * from "./Server";
 
-export interface IHTTPPluginOptions {
-	port: number;
-	controllers: any[];
-}
+let config: IHTTPPluginOptions;
 
 @Plugin({
 	services: [],
 })
 export class HTTPPlugin {
 	public static forRoot(options: IHTTPPluginOptions) {
-		const app = express();
-		Bootstrap(app, options.controllers, options.port);
-
+		config = options;
 		return this;
+	}
+
+	onLoad() {
+		bootstrap(config.controllers, config.port);
 	}
 }

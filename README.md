@@ -16,8 +16,8 @@ Hammer is still in development, you can join waitlist [here](https://hammer.338.
 -   [x] Implement localization package to core (like logger package)
 -   [x] Implement http plugin
 -   [x] Create plugin template
+-   [x] Update sidra package
 -   [ ] Create a seperate repo for plugin template
--   [ ] Update sidra package
 -   [ ] Add more documentation
 -   [ ] Increase the stability of the core package
 
