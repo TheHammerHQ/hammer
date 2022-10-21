@@ -1,7 +1,7 @@
 import { defineConfig } from "taze";
 
 export default defineConfig({
-	exclude: ["chalk"],
+	exclude: ["chalk", "@hammerhq/*"],
 	recursive: true,
 	force: true,
 });
