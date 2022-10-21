@@ -1,11 +1,11 @@
 import { bootstrap } from "@hammerhq/core";
-import { Client } from "discord.js";
-import { CONFIG } from "./config";
-import { ConfigurablePlugin } from "./plugins/configurable/configurable.plugin";
-import { ExamplePlugin } from "./plugins/example/example.plugin";
+import { CommandsPlugin } from "@hammerhq/plugin-commands";
 import { HTTPPlugin } from "@hammerhq/plugin-http";
-import { ExampleController } from "./controllers/example.controller";
+import { Client } from "discord.js";
 import { join } from "path";
+import { PingCommand } from "./commands/ping";
+import { CONFIG } from "./config";
+import { ExampleController } from "./controllers/example.controller";
 
 const client = new Client({
 	intents: [
@@ -25,13 +25,14 @@ async function main() {
 			directory: join(__dirname, "..", "locales"),
 		},
 		plugins: [
-			ExamplePlugin,
-			ConfigurablePlugin.forRoot({
-				foo: "bar",
-			}),
 			HTTPPlugin.forRoot({
 				port: 3000,
 				controllers: [ExampleController],
+			}),
+			CommandsPlugin.forRoot({
+				token: CONFIG.BOT_TOKEN,
+				clientId: CONFIG.CLIENT_ID,
+				commands: [PingCommand],
 			}),
 		],
 	});
