@@ -17,6 +17,7 @@ Hammer is still in development, you can join waitlist [here](https://hammer.338.
 -   [x] Implement http plugin
 -   [x] Create plugin template
 -   [x] Update sidra package
+-   [ ] Use services for loading controllers in plugin-http
 -   [ ] Create a seperate repo for plugin template
 -   [ ] Add more documentation
 -   [ ] Increase the stability of the core package
