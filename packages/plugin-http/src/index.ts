@@ -1,30 +1,31 @@
 import "reflect-metadata";
 
-import { Plugin } from "@hammerhq/core";
+import { defineConfig, Plugin } from "@hammerhq/core";
+import { HTTPService } from "./services/http.service";
 import { IHTTPPluginOptions } from "./types";
-import { bootstrap } from "./Bootstrap";
 
+export * from "./Bootstrap";
 export * from "./Controller";
+export * from "./global";
 export * from "./Method";
 export * from "./Middleware";
 export * from "./ParamDecorator";
-export * from "./global";
-export * from "./Bootstrap";
-export * from "./types";
 export * from "./Server";
-
-let config: IHTTPPluginOptions;
+export * from "./services/http.service";
+export * from "./types";
 
 @Plugin({
-	services: [],
+	services: [HTTPService],
 })
 export class HTTPPlugin {
+	constructor(private readonly httpService: HTTPService) {}
+
 	public static forRoot(options: IHTTPPluginOptions) {
-		config = options;
+		defineConfig(HTTPService, options);
 		return this;
 	}
 
 	onLoad() {
-		bootstrap(config.controllers, config.port);
+		this.httpService.bootstrap();
 	}
 }
