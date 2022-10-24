@@ -8,7 +8,7 @@
 		"email": "hi@338.rocks",
 		"url": "https://338.rocks"
 	},
-	"description": "",
+	"description": "Core package for Hammer Discord bot",
 	"keywords": [
 		"hammer",
 		"core",
@@ -16,6 +16,7 @@
 		"decorator",
 		"decorators"
 	],
+	"private": false,
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/TheHammerHQ/hammer"

@@ -1,17 +1,17 @@
-# @hammerhq/plugin-http
+# @hammerhq/plugin-commands
 
-This plugin adds the ability to create http server to Hammer projects.
+This plugin adds the ability to register slash commands to Hammer projects.
 
 # Usage
 
 ```ts
 import { bootstrap } from "@hammerhq/core";
-import { HTTPPlugin } from "@hammerhq/plugin-http";
+import { CommandsPlugin } from "@hammerhq/plugin-commands";
 import { Client } from "discord.js";
 import { join } from "path";
 
-// create your own controller or download them via npm!
-import { MyController } from "./controllers/MyController";
+// create your own commands or download them via npm!
+import { MyCommand } from "./commands/MyCommand";
 
 const client = new Client(ClientOptions);
 
@@ -24,9 +24,10 @@ async function main() {
 		},
 		plugins: [
 			// hammer plugins here. You can download them from npm or create your own!
-			HTTPPlugin.forRoot({
-				port: 3000, // http server port here
-				controllers: [MyController], // controllers here
+			CommandsPlugin.forRoot({
+				token: CONFIG.BOT_TOKEN,
+				clientId: CONFIG.CLIENT_ID,
+				commands: [MyCommand], // commands to register
 			}),
 		],
 	});
@@ -37,30 +38,30 @@ async function main() {
 main();
 ```
 
-# Creating a controller
+# Creating a command
 
 ```ts
+import { Client } from "@hammerhq/core";
+import { Command } from "@hammerhq/plugin-commands";
 import {
-	APIRes,
-	Controller,
-	Get,
-	HTTPStatus,
-	Server,
-} from "@hammerhq/plugin-http";
-import { Server as HTTPServer } from "http";
+	ChatInputCommandInteraction,
+	Client as DJSClient,
+	SlashCommandBuilder,
+} from "discord.js";
 
-@Controller("/example")
-export class ExampleController {
-	@Server()
-	server!: HTTPServer;
+@Command({
+	meta: new SlashCommandBuilder()
+		.setName("ping")
+		.setDescription("Replies with Pong!"),
+})
+export class PingCommand {
+	@Client()
+	client!: DJSClient;
 
-	@Get("/")
-	getHelloWorld(): APIRes<any> {
-		return {
-			statusCode: HTTPStatus.OK,
-			message: "Hello, world!",
-			data: this.server.address(),
-		};
+	public async execute(interaction: ChatInputCommandInteraction) {
+		interaction.reply({
+			content: `:ping_pong: Pong! \`${this.client.ws.ping}ms\``,
+		});
 	}
 }
 ```
@@ -91,4 +92,4 @@ Give a ⭐️ if this project helped you!
 -   Mail: hammer@338.rocks
 -   Discord: https://338.rocks/discord
 -   Website: https://hammer.338.rocks
--   Documentation: https://hammer.338.rocks/plugins/official/http
+-   Documentation: https://hammer.338.rocks/plugins/official/commands
