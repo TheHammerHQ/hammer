@@ -36,6 +36,7 @@ Hammer is still in development, you can join waitlist [here](https://hammer.338.
 -   [x] Update sidra package
 -   [x] Add more documentation
 -   [x] Use services for loading controllers in plugin-http
+-   [ ] see whats wrong with sequelize package, it doesnt see downloaded drivers.
 -   [ ] Increase the stability of the core package
 
 # Looking For Contributors

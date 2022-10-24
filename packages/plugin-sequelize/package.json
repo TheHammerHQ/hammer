@@ -1,0 +1,44 @@
+{
+	"name": "@hammerhq/plugin-sequelize",
+	"version": "0.1.3-alpha.0",
+	"description": "😎 Sequelize Plugin for Hammer",
+	"main": "dist",
+	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
+	"author": {
+		"email": "hi@338.rocks",
+		"name": "Barış DEMİRCİ",
+		"url": "https://338.rocks"
+	},
+	"license": "GPL-3.0",
+	"private": false,
+	"keywords": [
+		"hammer",
+		"http",
+		"decorator",
+		"decorators"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"prebuild": "rimraf dist",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@hammerhq/core": "*",
+		"@hammerhq/logger": "*",
+		"reflect-metadata": "^0.1.13",
+		"sequelize": "^6.25.3",
+		"sequelize-typescript": "^2.1.5"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.4",
+		"@types/validator": "^13.7.9",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.8.4"
+	}
+}
