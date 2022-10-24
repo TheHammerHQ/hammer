@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/plugin-sequelize",
-	"version": "0.1.3-alpha.0",
+	"version": "0.1.3",
 	"description": "😎 Sequelize Plugin for Hammer",
 	"main": "dist",
 	"typings": "dist",
