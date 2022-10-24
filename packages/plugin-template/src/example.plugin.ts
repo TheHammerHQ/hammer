@@ -1,4 +1,5 @@
-import { Plugin } from "@hammerhq/core";
+import { Logger, Plugin } from "@hammerhq/core";
+import { Logger as HammerLogger } from "@hammerhq/logger";
 import { ReadyEvent } from "./events/ready.event";
 import { LoggerService } from "./services/logger.service";
 
@@ -6,4 +7,11 @@ import { LoggerService } from "./services/logger.service";
 	services: [LoggerService],
 	events: [ReadyEvent],
 })
-export class ExamplePlugin {}
+export class ExamplePlugin {
+	@Logger("[ExamplePlugin]:")
+	logger!: HammerLogger;
+
+	public onLoad() {
+		this.logger.success("loaded!");
+	}
+}

@@ -1,6 +1,6 @@
+import { ELoadableTypes, ILoadable } from "../../types";
 import { checkType } from "../../utils/checkType";
 import { logger, pluginCache, serviceCache } from "../../utils/globals";
-import { ELoadableTypes, ILoadable } from "../../types";
 import { resolveEvent } from "./resolveEvent";
 import { resolveService } from "./resolveService";
 

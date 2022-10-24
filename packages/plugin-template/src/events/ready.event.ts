@@ -1,7 +1,7 @@
-import { Event, Client, Logger } from "@hammerhq/core";
+import { Client, Event, Logger } from "@hammerhq/core";
 import { Logger as HammerLogger } from "@hammerhq/logger";
 import { Client as DJSClient } from "discord.js";
-import { LoggerService } from "src/services/logger.service";
+import { LoggerService } from "../services/logger.service";
 
 @Event({
 	name: "ready",

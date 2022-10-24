@@ -1,4 +1,4 @@
-import { supportsColor, ChalkFunction, grey } from "chalk";
+import { ChalkFunction, grey, supportsColor } from "chalk";
 
 const log = (
 	prefix: string,

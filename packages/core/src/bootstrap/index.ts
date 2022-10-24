@@ -1,15 +1,15 @@
-import { setClient } from "../utils/client";
+import { I18n } from "@hammerhq/localization";
 import { IBootstrapOptions } from "../types";
+import { setClient } from "../utils/client";
 import {
 	eventCache,
 	logger,
 	pluginCache,
 	serviceCache,
 } from "../utils/globals";
-import { resolvePlugin } from "./resolvers/resolvePlugin";
-import { loadEvent } from "./loaders/loadEvent";
-import { I18n } from "@hammerhq/localization";
 import { setI18n } from "../utils/localization";
+import { loadEvent } from "./loaders/loadEvent";
+import { resolvePlugin } from "./resolvers/resolvePlugin";
 
 export const bootstrap = async ({
 	plugins,

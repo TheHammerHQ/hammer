@@ -1,6 +1,6 @@
+import { ELoadableTypes, IEventOptions, ILoadable } from "../../types";
 import { checkType } from "../../utils/checkType";
 import { eventCache, logger, serviceCache } from "../../utils/globals";
-import { ELoadableTypes, IEventOptions, ILoadable } from "../../types";
 
 export async function resolveEvent(Event: ILoadable) {
 	logger.event("Resolving event:", Event.name);

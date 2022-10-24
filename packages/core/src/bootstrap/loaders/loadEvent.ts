@@ -1,5 +1,5 @@
-import { getClient } from "../../utils/client";
 import { IEventOptions, ILoadable } from "../../types";
+import { getClient } from "../../utils/client";
 import { logger } from "../../utils/globals";
 
 export const loadEvent = async (eventName: string, events: ILoadable[]) => {

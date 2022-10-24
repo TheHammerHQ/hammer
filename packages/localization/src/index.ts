@@ -1,13 +1,13 @@
-import yaml from "yaml";
 import fs from "fs";
 import path from "path";
+import yaml from "yaml";
 import {
-	I18nOptions,
+	I18nArgs,
+	I18nConstants,
 	I18nFile,
+	I18nOptions,
 	I18nString,
 	I18nToJSON,
-	I18nConstants,
-	I18nArgs,
 } from "./types";
 
 export class I18n {

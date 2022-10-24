@@ -1,6 +1,6 @@
+import { ELoadableTypes, ILoadable } from "../../types";
 import { checkType } from "../../utils/checkType";
 import { logger, serviceCache } from "../../utils/globals";
-import { ELoadableTypes, ILoadable } from "../../types";
 
 export async function resolveService(Service: ILoadable) {
 	if (serviceCache.has(Service.name)) return;

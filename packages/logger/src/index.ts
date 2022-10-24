@@ -1,5 +1,5 @@
+import { cyan, green, grey, magenta, red, yellow, yellowBright } from "chalk";
 import * as utils from "./utils";
-import { grey, cyan, green, red, yellowBright, yellow, magenta } from "chalk";
 
 const {
 	infoIcon,
