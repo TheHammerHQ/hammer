@@ -9,7 +9,7 @@
 	},
 	"devDependencies": {
 		"lerna": "^6.0.1",
-		"nx": "^15.0.0",
+		"nx": "^15.0.1",
 		"prettier": "^2.7.1",
 		"taze": "^0.8.3"
 	}
