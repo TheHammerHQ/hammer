@@ -1,4 +1,5 @@
-import { I18n, Localization, Logger, Service } from "@hammerhq/core";
+import { Localization, Logger, Service } from "@hammerhq/core";
+import { I18n } from "@hammerhq/localization";
 import { Logger as HammerLogger } from "@hammerhq/logger";
 
 @Service({})

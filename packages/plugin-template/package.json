@@ -9,6 +9,7 @@
 	"dependencies": {
 		"@hammerhq/core": "*",
 		"@hammerhq/logger": "*",
+		"@hammerhq/localization": "*",
 		"discord.js": "^14.7.1"
 	},
 	"devDependencies": {

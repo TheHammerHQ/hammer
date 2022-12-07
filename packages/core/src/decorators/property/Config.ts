@@ -1,11 +1,6 @@
 import { configCache } from "../../utils";
+import { HammerPropertyDecorator } from "../PropertyDecorator";
 
-export const Config = () => {
-	const decorator: PropertyDecorator = (target, propertyKey) => {
-		Object.defineProperty(target, propertyKey, {
-			get: () => configCache.get(target.constructor.name),
-		});
-	};
-
-	return decorator;
-};
+export const Config = HammerPropertyDecorator({
+	get: (target) => configCache.get(target.constructor.name),
+});

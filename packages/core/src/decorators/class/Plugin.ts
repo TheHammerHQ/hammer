@@ -1,4 +1,6 @@
 import { ELoadableTypes, IPluginOptions } from "../../types";
-import { ClassDecorator } from "../ClassDecorator";
+import { HammerClassDecorator } from "../ClassDecorator";
 
-export const Plugin = ClassDecorator<IPluginOptions>(ELoadableTypes.PLUGIN);
+export const Plugin = HammerClassDecorator<IPluginOptions>(
+	ELoadableTypes.PLUGIN,
+);

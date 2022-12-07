@@ -1,4 +1,4 @@
 import { ELoadableTypes, IEventOptions } from "../../types";
-import { ClassDecorator } from "../ClassDecorator";
+import { HammerClassDecorator } from "../ClassDecorator";
 
-export const Event = ClassDecorator<IEventOptions>(ELoadableTypes.EVENT);
+export const Event = HammerClassDecorator<IEventOptions>(ELoadableTypes.EVENT);

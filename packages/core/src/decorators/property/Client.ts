@@ -1,11 +1,6 @@
 import { getClient } from "../../utils/client";
+import { HammerPropertyDecorator } from "../PropertyDecorator";
 
-export const Client = () => {
-	const decorator: PropertyDecorator = (target, propertyKey) => {
-		Object.defineProperty(target, propertyKey, {
-			get: () => getClient(),
-		});
-	};
-
-	return decorator;
-};
+export const Client = HammerPropertyDecorator({
+	get: getClient,
+});

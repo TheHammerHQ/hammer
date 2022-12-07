@@ -1,4 +1,6 @@
 import { ELoadableTypes, IServiceOptions } from "../../types";
-import { ClassDecorator } from "../ClassDecorator";
+import { HammerClassDecorator } from "../ClassDecorator";
 
-export const Service = ClassDecorator<IServiceOptions>(ELoadableTypes.SERVICE);
+export const Service = HammerClassDecorator<IServiceOptions>(
+	ELoadableTypes.SERVICE,
+);

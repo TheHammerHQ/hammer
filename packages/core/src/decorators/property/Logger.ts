@@ -1,11 +1,6 @@
 import { Logger as HammerLogger } from "@hammerhq/logger";
+import { HammerPropertyDecorator } from "../PropertyDecorator";
 
-export const Logger = (prefix: string) => {
-	const decorator: PropertyDecorator = (target, propertyKey) => {
-		Object.defineProperty(target, propertyKey, {
-			value: new HammerLogger(prefix),
-		});
-	};
-
-	return decorator;
-};
+export const Logger = HammerPropertyDecorator<string>({
+	value: (_, __, prefix) => new HammerLogger(prefix),
+});

@@ -1,13 +1,6 @@
 import { getI18n } from "../../utils/localization";
+import { HammerPropertyDecorator } from "../PropertyDecorator";
 
-export { I18n } from "@hammerhq/localization";
-
-export const Localization = () => {
-	const decorator: PropertyDecorator = (target, propertyKey) => {
-		Object.defineProperty(target, propertyKey, {
-			get: () => getI18n(),
-		});
-	};
-
-	return decorator;
-};
+export const Localization = HammerPropertyDecorator({
+	get: getI18n,
+});

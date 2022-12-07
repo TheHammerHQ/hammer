@@ -23,9 +23,7 @@ export class CommandsService {
 
 	public commands = new Collection<string, ILoadable>();
 
-	private readonly rest = new REST({ version: "10" }).setToken(
-		this.config.token,
-	);
+	private readonly rest = new REST().setToken(this.config.token);
 
 	public async loadCommands() {
 		this.logger.event("Loading commands...");

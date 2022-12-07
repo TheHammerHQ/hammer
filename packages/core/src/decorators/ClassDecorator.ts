@@ -1,7 +1,7 @@
 import { ELoadableTypes, ILoadable } from "../types";
 import { configure } from "../utils";
 
-export const ClassDecorator = <T>(type: ELoadableTypes) => {
+export const HammerClassDecorator = <T>(type: ELoadableTypes) => {
 	return (options: T) => {
 		const decorator: ClassDecorator = (target) => {
 			configure(
