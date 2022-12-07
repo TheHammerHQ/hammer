@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/core",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"main": "dist",
 	"typings": "dist",
 	"author": {
@@ -27,8 +27,8 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/localization": "^0.1.4",
-		"@hammerhq/logger": "^0.1.4",
+		"@hammerhq/localization": "^0.1.5",
+		"@hammerhq/logger": "^0.1.5",
 		"discord.js": "^14.7.1",
 		"reflect-metadata": "^0.1.13"
 	},
@@ -42,4 +42,3 @@
 	},
 	"gitHead": "409923ea4dbbd1be15268252b7ce31ff3bb2a564"
 }
-

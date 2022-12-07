@@ -1,15 +1,15 @@
 {
 	"name": "plugin-template",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"private": true,
 	"scripts": {
 		"prebuild": "rimraf dist",
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/core": "^0.1.4",
-		"@hammerhq/localization": "^0.1.4",
-		"@hammerhq/logger": "^0.1.4",
+		"@hammerhq/core": "^0.1.5",
+		"@hammerhq/localization": "^0.1.5",
+		"@hammerhq/logger": "^0.1.5",
 		"discord.js": "^14.7.1"
 	},
 	"devDependencies": {
