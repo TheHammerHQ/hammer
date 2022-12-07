@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/logger",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "😎 Cool looking logs for everyone!",
 	"main": "dist",
 	"typings": "dist",

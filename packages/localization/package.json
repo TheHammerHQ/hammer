@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/localization",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "✨ YAML based localization system for everyone!",
 	"main": "dist",
 	"typings": "dist",
