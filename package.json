@@ -4,13 +4,13 @@
 	"scripts": {
 		"bootstrap": "lerna bootstrap --force-local",
 		"build": "lerna run build",
-		"update": "taze major -w",
+		"update": "taze latest -w",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"lerna": "^6.0.1",
-		"nx": "^15.0.1",
-		"prettier": "^2.7.1",
-		"taze": "^0.8.3"
+		"lerna": "^6.1.0",
+		"nx": "^15.3.0",
+		"prettier": "^2.8.0",
+		"taze": "^0.8.4"
 	}
 }

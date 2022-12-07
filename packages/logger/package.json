@@ -33,9 +33,9 @@
 		"chalk": "^4.1.0"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.4",
+		"@types/node": "^18.11.11",
 		"rimraf": "^3.0.2",
-		"typescript": "^4.8.4"
+		"typescript": "^4.9.3"
 	},
 	"gitHead": "b0d26aa1ad7f980031d6867e8a262b6481203b87"
 }

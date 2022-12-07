@@ -11,15 +11,15 @@
 		"@hammerhq/plugin-commands": "*",
 		"@hammerhq/plugin-http": "*",
 		"@hammerhq/plugin-sequelize": "*",
-		"discord.js": "^14.6.0",
+		"discord.js": "^14.7.1",
 		"express": "^4.18.2",
 		"pg": "^8.8.0",
 		"pg-hstore": "^2.3.4"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.4",
+		"@types/node": "^18.11.11",
 		"@types/pg": "^8.6.5",
 		"ts-node": "^10.9.1",
-		"typescript": "^4.8.4"
+		"typescript": "^4.9.3"
 	}
 }

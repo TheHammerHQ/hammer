@@ -32,13 +32,13 @@
 		"@hammerhq/core": "*",
 		"@hammerhq/logger": "*",
 		"reflect-metadata": "^0.1.13",
-		"sequelize": "^6.25.3",
+		"sequelize": "^6.26.0",
 		"sequelize-typescript": "^2.1.5"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.4",
-		"@types/validator": "^13.7.9",
+		"@types/node": "^18.11.11",
+		"@types/validator": "^13.7.10",
 		"rimraf": "^3.0.2",
-		"typescript": "^4.8.4"
+		"typescript": "^4.9.3"
 	}
 }
