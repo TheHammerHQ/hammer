@@ -12,14 +12,14 @@ export const ParamDecorator = <T, K extends boolean>(type: string) => {
 				Reflect.getMetadata(
 					"arguments",
 					target.constructor,
-					propertyKey,
+					propertyKey as string,
 				) || [];
 			const existing = args.find((arg) => arg.index === parameterIndex);
 			if (existing) args[parameterIndex + 1] = { ...existing, data };
 			else
 				args.unshift({
 					index: parameterIndex,
-					propertyKey,
+					propertyKey: propertyKey as string,
 					type,
 					data,
 				});
@@ -28,7 +28,7 @@ export const ParamDecorator = <T, K extends boolean>(type: string) => {
 				"arguments",
 				args,
 				target.constructor,
-				propertyKey,
+				propertyKey as string,
 			);
 		};
 
