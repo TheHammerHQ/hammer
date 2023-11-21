@@ -29,17 +29,17 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/core": "^0.1.5",
-		"@hammerhq/logger": "^0.1.5",
+		"@hammerhq/core": "*",
+		"@hammerhq/logger": "*",
 		"reflect-metadata": "^0.1.13",
-		"sequelize": "^6.26.0",
+		"sequelize": "^6.35.1",
 		"sequelize-typescript": "^2.1.5"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.11",
-		"@types/validator": "^13.7.10",
-		"rimraf": "^3.0.2",
-		"typescript": "^4.9.3"
+		"@types/node": "^20.9.3",
+		"@types/validator": "^13.11.7",
+		"rimraf": "^5.0.5",
+		"typescript": "^5.3.2"
 	},
 	"gitHead": "409923ea4dbbd1be15268252b7ce31ff3bb2a564"
 }

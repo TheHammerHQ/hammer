@@ -32,16 +32,16 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/core": "^0.1.5",
-		"@hammerhq/logger": "^0.1.5",
+		"@hammerhq/core": "*",
+		"@hammerhq/logger": "*",
 		"express": "^4.18.2",
 		"reflect-metadata": "^0.1.13"
 	},
 	"devDependencies": {
-		"@types/express": "^4.17.14",
-		"@types/node": "^18.11.11",
-		"rimraf": "^3.0.2",
-		"typescript": "^4.9.3"
+		"@types/express": "^4.17.21",
+		"@types/node": "^20.9.3",
+		"rimraf": "^5.0.5",
+		"typescript": "^5.3.2"
 	},
 	"gitHead": "409923ea4dbbd1be15268252b7ce31ff3bb2a564"
 }

@@ -8,9 +8,9 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"lerna": "^6.1.0",
-		"nx": "^15.3.0",
-		"prettier": "^2.8.0",
-		"taze": "^0.8.4"
+		"lerna": "^7.4.2",
+		"nx": "^17.1.3",
+		"prettier": "^3.1.0",
+		"taze": "^0.12.0"
 	}
 }

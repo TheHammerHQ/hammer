@@ -6,20 +6,20 @@
 		"dev": "ts-node src"
 	},
 	"dependencies": {
-		"@hammerhq/core": "^0.1.5",
-		"@hammerhq/logger": "^0.1.5",
-		"@hammerhq/plugin-commands": "^0.1.5",
-		"@hammerhq/plugin-http": "^0.1.5",
-		"@hammerhq/plugin-sequelize": "^0.1.5",
-		"discord.js": "^14.7.1",
+		"@hammerhq/core": "*",
+		"@hammerhq/logger": "*",
+		"@hammerhq/plugin-commands": "*",
+		"@hammerhq/plugin-http": "*",
+		"@hammerhq/plugin-sequelize": "*",
+		"discord.js": "^14.14.1",
 		"express": "^4.18.2",
-		"pg": "^8.8.0",
+		"pg": "^8.11.3",
 		"pg-hstore": "^2.3.4"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.11",
-		"@types/pg": "^8.6.5",
+		"@types/node": "^20.9.3",
+		"@types/pg": "^8.10.9",
 		"ts-node": "^10.9.1",
-		"typescript": "^4.9.3"
+		"typescript": "^5.3.2"
 	}
 }
