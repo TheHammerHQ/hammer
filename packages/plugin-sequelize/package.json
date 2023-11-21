@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/plugin-sequelize",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"description": "😎 Sequelize Plugin for Hammer",
 	"main": "dist",
 	"typings": "dist",
@@ -29,8 +29,8 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/core": "^0.2.0",
-		"@hammerhq/logger": "^0.2.0",
+		"@hammerhq/core": "^1.0.0",
+		"@hammerhq/logger": "^1.0.0",
 		"reflect-metadata": "^0.1.13",
 		"sequelize": "^6.35.1",
 		"sequelize-typescript": "^2.1.5"
@@ -40,6 +40,5 @@
 		"@types/validator": "^13.11.7",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.3.2"
-	},
-	"gitHead": "409923ea4dbbd1be15268252b7ce31ff3bb2a564"
+	}
 }

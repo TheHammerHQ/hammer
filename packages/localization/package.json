@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/localization",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"description": "✨ YAML based localization system for everyone!",
 	"main": "dist",
 	"typings": "dist",
@@ -38,6 +38,5 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"gitHead": "409923ea4dbbd1be15268252b7ce31ff3bb2a564"
+	}
 }
