@@ -4,14 +4,14 @@
 	"description": "✨ Use Discord as a database!",
 	"main": "dist",
 	"typings": "dist",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/TheHammerHQ/hammer"
-	},
 	"author": {
 		"email": "hi@338.rocks",
 		"name": "Barış DEMİRCİ",
 		"url": "https://338.rocks"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
 	},
 	"maintainers": [
 		{
