@@ -4,8 +4,8 @@
 	"scripts": {
 		"bootstrap": "lerna bootstrap --force-local",
 		"build": "lerna run build",
-		"update": "taze latest -w",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"update": "taze latest -w"
 	},
 	"devDependencies": {
 		"lerna": "^7.4.2",
