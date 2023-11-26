@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/cli",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "✨ Hammer CLI used to install and manage Hammer packages.",
 	"main": "dist",
 	"typings": "dist",

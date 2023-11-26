@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.1.0
+
+### Minor Changes
+
+-   Fix plugin installation error
+
 ## 2.0.3
 
 ### Patch Changes

@@ -16,7 +16,7 @@ tool.createCommand(
 		aliases: ["add", "i", "a"],
 		category: "bot",
 		usage: "<plugin>",
-		example: ["@github.com/barbarbar338/hammer-plugin-uptime"],
+		example: ["github.com/barbarbar338/hammer-plugin-uptime"],
 		argDefinitions: [
 			{
 				name: "plugin",
@@ -30,9 +30,18 @@ tool.createCommand(
 	(command, args) => {
 		logger.info("Installing plugin", args.plugin);
 
-		const [_, provider, username, plugin] = (args.plugin as string).split(
-			"/",
-		);
+		const [provider, username, plugin] = (args.plugin as string).split("/");
+		if (!provider || !username || !plugin) {
+			logger.error("Invalid plugin name:", args.plugin);
+			logger.warning(
+				"Please use the format <provider>/<username>/<plugin>",
+			);
+			logger.info(
+				"Example: github.com/barbarbar338/hammer-plugin-uptime",
+			);
+
+			process.exit(1);
+		}
 
 		const folders = createUserFolder(provider, username);
 
