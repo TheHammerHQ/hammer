@@ -1,5 +1,11 @@
 # @hammerhq/plugin-commands
 
+## 2.3.0
+
+### Minor Changes
+
+-   Check if interaction is chat input command
+
 ## 2.2.0
 
 ### Minor Changes

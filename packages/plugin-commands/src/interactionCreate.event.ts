@@ -10,7 +10,7 @@ export class InteractionCreateEvent {
 	constructor(private readonly commandsService: CommandsService) {}
 
 	public async execute(interaction: Interaction) {
-		if (!interaction.isCommand()) return;
+		if (!interaction.isChatInputCommand()) return;
 		const cmd = this.commandsService.commands.get(interaction.commandName);
 		if (cmd) {
 			await cmd.execute(interaction);
