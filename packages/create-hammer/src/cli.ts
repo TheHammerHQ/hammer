@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
+import { execSync } from "child_process";
 import { create } from "create-create-app";
 import { resolve } from "path";
 
 const templateRoot = resolve(__dirname, "..", "templates");
-
-const caveat = `
-Your Hammer project is ready to rock! 🚀
-`;
 
 // See https://github.com/uetchy/create-create-app/blob/master/README.md for other options.
 
@@ -19,9 +16,22 @@ create("create-hammer", {
 	promptForAuthor: false,
 	promptForEmail: false,
 	promptForLicense: false,
-	after: ({ answers }) =>
+	after: ({ template }) => {
 		console.log(
-			`Creating your Hammer project with ${answers.template} template...`,
-		),
-	caveat,
+			`Creating your Hammer project with ${template} template...`,
+		);
+	},
+	caveat: ({ packageDir }) => {
+		console.log("Updating dependencies...");
+
+		execSync("npm run update", {
+			cwd: packageDir,
+		});
+
+		return `
+			Your Hammer project is ready to rock! 🚀
+			
+			Don't forget to regularly update your dependencies by running \`npm run update\` in your project directory!
+		`;
+	},
 });

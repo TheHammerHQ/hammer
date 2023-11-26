@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.0.1
+
+### Patch Changes
+
+-   Upgrading packages to latest version after creating a package with create-hammer cli
+
 ## 2.0.0
 
 ### Major Changes
