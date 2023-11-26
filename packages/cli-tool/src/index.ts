@@ -1,4 +1,8 @@
-import { hargs } from "@hammerhq/hargs";
+import {
+	hargs,
+	IHargsOptionDefinition,
+	IHargsParseResult,
+} from "@hammerhq/hargs";
 import "colors";
 
 export interface ICommand {
@@ -8,18 +12,10 @@ export interface ICommand {
 	category: string;
 	aliases: string[];
 	description: string;
-	argDefinitions: ArgDefinition[];
+	argDefinitions: IHargsOptionDefinition;
 }
 
 export interface UnknownObject {
-	[key: string]: unknown;
-}
-
-export interface HargsResult {
-	_unknown: {
-		_?: string;
-		[key: string]: unknown;
-	};
 	[key: string]: unknown;
 }
 
@@ -27,15 +23,10 @@ export interface HelpCategory {
 	[key: string]: ICommand[];
 }
 
-export type ToolFunction = (command: string, args: UnknownObject) => unknown;
-
-export type ArgDefinition = {
-	name: string;
-	type: (t: unknown) => unknown;
-	aliases?: string[];
-	default?: boolean;
-	isOptional?: boolean;
-};
+export type ToolFunction = (
+	command: string,
+	args: IHargsParseResult,
+) => unknown;
 
 class Tool {
 	private commands: ICommand[] = [];
@@ -79,20 +70,16 @@ class Tool {
 		const args = hargs(
 			command.argDefinitions,
 			process.argv.slice(3),
-		) as HargsResult;
+		) as IHargsParseResult;
 
-		const outputArgs: UnknownObject = {};
-		if (args.help || args._unknown.help || args.h || args._unknown.h)
+		if (
+			args["--help"] ||
+			args._unknown.includes("--help") ||
+			args._unknown.includes("-h")
+		)
 			return this.handleHelp(command);
 
-		for (const definition of command.argDefinitions) {
-			if (!definition.isOptional && !args[definition.name])
-				return this.handleHelp(command);
-
-			outputArgs[definition.name] = args[definition.name];
-		}
-
-		fn(command.name, outputArgs);
+		fn(command.name, args);
 
 		return this;
 	}

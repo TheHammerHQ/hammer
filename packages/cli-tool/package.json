@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/cli-tool",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "✨ A simple CLI commander system",
 	"main": "dist",
 	"typings": "dist",
@@ -38,7 +38,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/hargs": "^2.0.0",
+		"@hammerhq/hargs": "^2.1.0",
 		"colors": "^1.4.0"
 	},
 	"devDependencies": {

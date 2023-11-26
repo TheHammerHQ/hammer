@@ -2,6 +2,8 @@
 
 ✨ A simple argument parsing system with 0 dependencies
 
+-   A friendly fork of [vercel/arg](https://github.com/vercel/arg)
+
 # 📥 Installation
 
 ```
@@ -11,17 +13,20 @@ $ npm install # @hammerhq/hargs
 # 🔧 Usage
 
 ```js
-hargs(IOptionDefinition[], argv?);
+hargs(IOptionDefinition, argv?);
 ```
 
--   `IOptionDefinition[]`: Where options are defined to be used when separating arguments. Structure:
+-   `IOptionDefinition`: Where options are defined to be used when separating arguments. Structure:
 
 ```js
 {
-    name: "OptionName",
-    type: String, //OptionType (function)
-    aliases?: [ "option", "aliases", "t" ],
-    default?: false
+    // Option definitions
+    "--option": String,
+    "--option2": Boolean,
+    "--option3": MyCustomFunction,
+
+    // Aliases
+    "-o": "--option",
 }
 ```
 
@@ -36,24 +41,26 @@ import { hargs } from "hargs";
 /* commonJS */
 const { hargs } = require("hargs");
 
-const definitions = [
-	{ name: "help", type: Boolean, aliases: ["h", "halp", "yardim", "y"] },
-	{ name: "message", type: String, default: true },
-	{ name: "page", type: Number },
-];
+const argv = ["--foo=bar", "-p", "2", "--foo", "baz", "test", "1", "2", "-h"];
 
-const argv = ["This", "is", "message", "-h", "--page", "2", "--foo", "bar"];
+hargs(
+	{
+		"--help": Boolean,
+		"--page": Number,
+		"--foo": [String],
 
-hargs(definitions, argv);
+		"-p": "--page",
+		"-h": "--help",
+	},
+	argv,
+);
 /*
- * {
- *     _unknown: {
- *         foo: "bar"
- *     },
- *     help: true,
- *     message: "This is message",
- *     page: 2
- * }
+{
+  _unknown: [ 'test', '1', '2' ],
+  '--foo': [ 'bar', 'baz' ],
+  '--page': 2,
+  '--help': false
+}
  */
 ```
 

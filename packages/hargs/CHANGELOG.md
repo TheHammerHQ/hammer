@@ -1,5 +1,11 @@
 # @hammerhq/hargs
 
+## 2.1.0
+
+### Minor Changes
+
+-   Changed argument parser
+
 ## 2.0.0
 
 ### Major Changes

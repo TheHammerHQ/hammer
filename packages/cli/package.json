@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/cli",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "✨ Hammer CLI used to install and manage Hammer packages.",
 	"main": "dist",
 	"typings": "dist",
@@ -29,7 +29,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/cli-tool": "^2.0.0",
+		"@hammerhq/cli-tool": "^2.1.0",
 		"@hammerhq/logger": "^2.0.0"
 	},
 	"devDependencies": {

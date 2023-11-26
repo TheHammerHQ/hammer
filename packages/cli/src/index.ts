@@ -15,24 +15,30 @@ tool.createCommand(
 		description: "Install a plugin to your Hammer bot",
 		aliases: ["add", "i", "a"],
 		category: "bot",
-		usage: "<plugin>",
-		example: ["github.com/barbarbar338/hammer-plugin-uptime"],
-		argDefinitions: [
-			{
-				name: "plugin",
-				default: true,
-				type: String,
-				aliases: ["p", "plug", "module", "package"],
-				isOptional: false,
-			},
+		usage: "--plugin <plugin>",
+		example: [
+			"--plugin github.com/barbarbar338/hammer-plugin-uptime",
+			"-p github.com/TheHammerHQ/hammer-plugin-example",
 		],
+		argDefinitions: {
+			"--plugin": String,
+
+			"-p": "--plugin",
+		},
 	},
 	(command, args) => {
-		logger.info("Installing plugin", args.plugin);
+		const pluginName = args["--plugin"] as string;
+		if (!pluginName) {
+			logger.error("Please specify a plugin to install.");
 
-		const [provider, username, plugin] = (args.plugin as string).split("/");
+			process.exit(1);
+		}
+
+		logger.info("Installing plugin", pluginName);
+
+		const [provider, username, plugin] = pluginName.split("/");
 		if (!provider || !username || !plugin) {
-			logger.error("Invalid plugin name:", args.plugin);
+			logger.error("Invalid plugin name:", pluginName);
 			logger.warning(
 				"Please use the format <provider>/<username>/<plugin>",
 			);

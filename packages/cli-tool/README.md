@@ -27,21 +27,26 @@ tool
     category: "test", // Command category
     aliases: [ "t" ], // Command aliases
     description: "just a test command", // Command description
-    argDefinitions: [
-        { name: "message", type: String, aliases: [ "m" ] }
-    ] // Arg definition array (Learn about ArgDefinition below)
+    argDefinitions: {
+        // Arg definitions
+        "--message": String,
+
+        // Alias definition
+        "-m": "--message"
+    } // Arg definitions (Learn about IHargsOptionDefinition below)
 }
 ```
 
--   `ArgDefinition`: Where options are defined to be used when separating arguments. Structure:
+-   `IHargsOptionDefinition`: Where options are defined to be used when separating arguments. Structure:
 
-```js
-{
-    name: "message", // Option name
-    type: String // Option type (function)
-    aliases?: [ "m" ], // Option aliases (optional)
-    default?: false, // optional
-    isOptional?: false // optional
+```ts
+type TArgName = `--${string}`;
+type TAliasName = `-${string}`;
+
+interface IHargsOptionDefinition {
+	[key: TArgName | TAliasName]: typeof key extends TArgName
+		? Function | [Function]
+		: TArgName;
 }
 ```
 
@@ -62,17 +67,22 @@ import { tool } from "@hammerhq/cli-tool";
 tool
     .createCommand({
         name: "install",
-        usage: "<module_name> [--version] <package_version>",
-        example: [ "tool", "hargs --version 1.0.1" ],
+        usage: "-m <module_name> [--version] <package_version>",
+        example: [ "--module tool", "-m hargs --version 1.0.1" ],
         category: "utility",
         aliases: [ "i", "add" ],
         description: "Install packages from server",
-        argDefinitions: [
-            { name: "module", type: String, default: true },
-            { name: "version", type: String, isOptional: true }
-        ]
+        argDefinitions: {
+            "--module": String,
+            "--version": String,
+
+            "-m": "--module",
+            "-v": "--version"
+        }
     }, (commandName, args) => {
-        const { module, version } = args;
+        const module = args["--module"];
+        const version = args["--version"];
+
         console.log("You have downloaded package", module, "with version" version ? version : "latest");
     })
     .help()

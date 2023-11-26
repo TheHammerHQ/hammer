@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.1.1
+
+### Patch Changes
+
+-   Updated template dependencies
+
 ## 2.1.0
 
 ### Minor Changes
