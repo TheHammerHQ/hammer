@@ -8,6 +8,7 @@
 	"scripts": {
 		"format": "prettier --write .",
 		"update": "taze latest -w",
+		"build": "turbo run build",
 		"publish-packages": "turbo run build && changeset version && changeset publish"
 	},
 	"devDependencies": {
