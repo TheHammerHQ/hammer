@@ -1,5 +1,11 @@
 # @hammerhq/logger
 
+## 2.1.0
+
+### Minor Changes
+
+-   Converted project from a public bot to framework
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,16 @@
 # @hammerhq/cli-tool
 
+## 2.2.0
+
+### Minor Changes
+
+-   Converted project from a public bot to framework
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @hammerhq/hargs@2.2.0
+
 ## 2.1.0
 
 ### Minor Changes

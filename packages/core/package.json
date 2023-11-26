@@ -1,14 +1,27 @@
 {
 	"name": "@hammerhq/core",
-	"version": "2.0.0",
+	"description": "Core package for Hammer Discord bot",
+	"version": "2.1.0",
 	"main": "dist",
 	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
 	"author": {
-		"name": "Barış DEMİRCİ",
 		"email": "hi@338.rocks",
+		"name": "Barış DEMİRCİ",
 		"url": "https://338.rocks"
 	},
-	"description": "Core package for Hammer Discord bot",
+	"license": "GPL-3.0",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"prebuild": "rimraf dist",
+		"build": "tsc"
+	},
 	"keywords": [
 		"hammer",
 		"core",
@@ -16,19 +29,9 @@
 		"decorator",
 		"decorators"
 	],
-	"private": false,
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/TheHammerHQ/hammer"
-	},
-	"license": "GPL-3.0",
-	"scripts": {
-		"prebuild": "rimraf dist",
-		"build": "tsc"
-	},
 	"dependencies": {
-		"@hammerhq/localization": "^2.0.0",
-		"@hammerhq/logger": "^2.0.0",
+		"@hammerhq/localization": "^2.1.0",
+		"@hammerhq/logger": "^2.1.0",
 		"discord.js": "^14.14.1",
 		"reflect-metadata": "^0.1.13"
 	},
@@ -36,8 +39,5 @@
 		"@types/node": "^20.10.0",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.3.2"
-	},
-	"publishConfig": {
-		"access": "public"
 	}
 }

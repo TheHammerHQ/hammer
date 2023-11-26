@@ -1,17 +1,22 @@
 {
 	"name": "@hammerhq/discord.db",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "✨ Use Discord as a database!",
 	"main": "dist",
 	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
 	"author": {
 		"email": "hi@338.rocks",
 		"name": "Barış DEMİRCİ",
 		"url": "https://338.rocks"
 	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/TheHammerHQ/hammer"
+	"license": "GPL-3.0",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
 	},
 	"maintainers": [
 		{
@@ -20,8 +25,10 @@
 			"url": "https://github.com/ThugDenGamer"
 		}
 	],
-	"license": "GPL-3.0",
-	"private": false,
+	"scripts": {
+		"prebuild": "rimraf dist",
+		"build": "tsc"
+	},
 	"keywords": [
 		"hammer",
 		"discord",
@@ -39,13 +46,6 @@
 		"backup",
 		"save"
 	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"prebuild": "rimraf dist",
-		"build": "tsc"
-	},
 	"devDependencies": {
 		"@types/lodash.get": "^4.4.9",
 		"@types/lodash.has": "^4.5.9",
@@ -59,7 +59,7 @@
 		"typescript": "^5.3.2"
 	},
 	"dependencies": {
-		"@hammerhq/logger": "^2.0.0",
+		"@hammerhq/logger": "^2.1.0",
 		"axios": "^1.6.2",
 		"discord.js": "^14.14.1",
 		"lodash.get": "^4.4.2",

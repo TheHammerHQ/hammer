@@ -1,5 +1,17 @@
 # @hammerhq/cli
 
+## 2.3.0
+
+### Minor Changes
+
+-   Converted project from a public bot to framework
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @hammerhq/cli-tool@2.2.0
+    -   @hammerhq/logger@2.1.0
+
 ## 2.2.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.2.0
+
+### Minor Changes
+
+-   Converted project from a public bot to framework
+
 ## 2.1.3
 
 ### Patch Changes

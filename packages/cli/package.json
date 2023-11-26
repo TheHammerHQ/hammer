@@ -1,12 +1,9 @@
 {
 	"name": "@hammerhq/cli",
-	"version": "2.2.2",
+	"version": "2.3.0",
 	"description": "✨ Hammer CLI used to install and manage Hammer packages.",
 	"main": "dist",
 	"typings": "dist",
-	"bin": {
-		"hammer": "dist/index.js"
-	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/TheHammerHQ/hammer"
@@ -18,26 +15,29 @@
 	},
 	"license": "GPL-3.0",
 	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"bin": {
+		"hammer": "dist/index.js"
+	},
+	"scripts": {
+		"prebuild": "rimraf dist",
+		"build": "tsc"
+	},
 	"keywords": [
 		"hammer",
 		"cli",
 		"tool",
 		"plugin"
 	],
-	"scripts": {
-		"prebuild": "rimraf dist",
-		"build": "tsc"
-	},
 	"dependencies": {
-		"@hammerhq/cli-tool": "^2.1.0",
-		"@hammerhq/logger": "^2.0.0"
+		"@hammerhq/cli-tool": "^2.2.0",
+		"@hammerhq/logger": "^2.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.0",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.3.2"
-	},
-	"publishConfig": {
-		"access": "public"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/logger",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "😎 Cool looking logs for everyone!",
 	"main": "dist",
 	"typings": "dist",
@@ -15,13 +15,6 @@
 	},
 	"license": "GPL-3.0",
 	"private": false,
-	"keywords": [
-		"hammer",
-		"log",
-		"logger",
-		"configurable",
-		"mock"
-	],
 	"publishConfig": {
 		"access": "public"
 	},
@@ -29,6 +22,15 @@
 		"prebuild": "rimraf dist",
 		"build": "tsc"
 	},
+	"keywords": [
+		"hammer",
+		"log",
+		"logger",
+		"configurable",
+		"mock",
+		"mocking",
+		"plugin"
+	],
 	"dependencies": {
 		"chalk": "^4.1.0"
 	},

@@ -1,8 +1,26 @@
 {
 	"name": "create-hammer",
 	"description": "Create Hammer apps/plugins with ease!",
-	"version": "2.1.3",
-	"author": "Barış DEMİRCİ <hi@338.rocks>",
+	"version": "2.2.0",
+	"bin": {
+		"create-hammer": "dist/cli.js"
+	},
+	"main": "dist",
+	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
+	"author": {
+		"email": "hi@338.rocks",
+		"name": "Barış DEMİRCİ",
+		"url": "https://338.rocks"
+	},
+	"license": "GPL-3.0",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "tsup src/cli.ts --minify",
 		"clean": "rimraf dist",
@@ -10,12 +28,6 @@
 		"prepublishOnly": "npm run clean && npm run build",
 		"update": "taze latest -w",
 		"format": "prettier --write ."
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"bin": {
-		"create-hammer": "dist/cli.js"
 	},
 	"files": [
 		"dist",
@@ -29,7 +41,6 @@
 		"tsup": "^8.0.1",
 		"typescript": "^5.3.2"
 	},
-	"license": "GPL-3.0",
 	"dependencies": {
 		"create-create-app": "^7.3.0"
 	}

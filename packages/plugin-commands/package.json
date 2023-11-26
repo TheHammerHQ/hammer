@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/plugin-commands",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "😎 Commands Plugin for Hammer",
 	"main": "dist",
 	"typings": "dist",
@@ -15,12 +15,6 @@
 	},
 	"license": "GPL-3.0",
 	"private": false,
-	"keywords": [
-		"hammer",
-		"http",
-		"decorator",
-		"decorators"
-	],
 	"publishConfig": {
 		"access": "public"
 	},
@@ -28,9 +22,21 @@
 		"prebuild": "rimraf dist",
 		"build": "tsc"
 	},
+	"keywords": [
+		"hammer",
+		"decorator",
+		"decorators",
+		"command",
+		"commands",
+		"plugin",
+		"plugins",
+		"discord",
+		"discord.js",
+		"discordjs"
+	],
 	"dependencies": {
-		"@hammerhq/core": "^2.0.0",
-		"@hammerhq/logger": "^2.0.0",
+		"@hammerhq/core": "^2.1.0",
+		"@hammerhq/logger": "^2.1.0",
 		"discord.js": "^14.14.1",
 		"reflect-metadata": "^0.1.13"
 	},

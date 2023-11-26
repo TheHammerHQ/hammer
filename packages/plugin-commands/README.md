@@ -1,8 +1,25 @@
-# @hammerhq/plugin-commands
+<p align="center">
+    <img src="https://avatars.githubusercontent.com/u/109850261" alt="Logo" width="160" height="160" />
+    <h3 align="center">Hammer Framework Commands Plugin</h3>
+    <p align="center">
+        This plugin adds the ability to register slash commands to Hammer bots.
+        <br />
+        <a href="https://338.rocks/discord"><strong>Get support »</strong></a>
+        <br />
+        <br />
+        <a href="https://github.com/TheHammerHQ/issues">Report Bug</a>
+        ·
+        <a href="https://hammer.338.rocks/docs/plugins/commands">Documentation</a>
+    </p>
+</p>
 
-This plugin adds the ability to register slash commands to Hammer projects.
+# 📦 Installation
 
-# Usage
+```bash
+$ npm install @hammerhq/plugin-commands
+```
+
+# 🚀 Usage
 
 ```ts
 import { bootstrap } from "@hammerhq/core";
@@ -23,7 +40,7 @@ async function main() {
 			directory: join(__dirname, "..", "locales"), // locales directory, see @hammerhq/localization
 		},
 		plugins: [
-			// hammer plugins here. You can download them from npm or create your own!
+			// hammer plugins here. You can download them with hammer cli, from npm and create your own!
 			CommandsPlugin.forRoot({
 				token: CONFIG.BOT_TOKEN,
 				clientId: CONFIG.CLIENT_ID,
@@ -38,7 +55,7 @@ async function main() {
 main();
 ```
 
-# Creating a command
+## 🧩 Creating a command
 
 ```ts
 import { Client } from "@hammerhq/core";
@@ -66,15 +83,19 @@ export class PingCommand {
 }
 ```
 
-# License
+# 🧦 Looking For Contributors
+
+We are looking for contributors to actively work on Hammer and to contribute to the repos. There is still lots of work to do. If you are interested in contributing, please join our [Discord server](https://338.rocks/discord). (There will be a surprise for early contributors!)
+
+# 🔑 License
 
 Copyright © 2022 [Barış DEMİRCİ](https://github.com/barbarbar338).
 
 Distributed under the [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html) License. See `LICENSE` for more information.
 
-# Contributing
+# 🧦 Contributing
 
-Feel free to use GitHub's features.
+This repo is open for #hacktoberfest. Feel free to use GitHub's features.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/my-feature`)
@@ -83,13 +104,13 @@ Feel free to use GitHub's features.
 5. Push to the Branch (`git push origin feature/my-feature`)
 6. Open a Pull Request
 
-# Show your support
+# ⭐️ Show your support
 
 Give a ⭐️ if this project helped you!
 
-# Contact
+# ☎️ Contact
 
 -   Mail: hammer@338.rocks
 -   Discord: https://338.rocks/discord
 -   Website: https://hammer.338.rocks
--   Documentation: https://hammer.338.rocks/plugins/official/commands
+-   Documentation: https://hammer.338.rocks/docs/plugins/commands

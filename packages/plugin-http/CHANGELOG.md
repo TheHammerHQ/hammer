@@ -1,5 +1,17 @@
 # @hammerhq/plugin-http
 
+## 2.1.0
+
+### Minor Changes
+
+-   Converted project from a public bot to framework
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @hammerhq/logger@2.1.0
+    -   @hammerhq/core@2.1.0
+
 ## 2.0.0
 
 ### Major Changes
