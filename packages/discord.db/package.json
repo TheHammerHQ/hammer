@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/discord.db",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "✨ Use Discord as a database!",
 	"main": "dist",
 	"typings": "dist",
@@ -51,15 +51,15 @@
 		"@types/lodash.has": "^4.5.9",
 		"@types/lodash.set": "^4.3.9",
 		"@types/lodash.unset": "^4.5.9",
-		"@types/node": "^20.9.3",
+		"@types/node": "^20.10.0",
 		"prettier": "^3.1.0",
 		"rimraf": "^5.0.5",
-		"taze": "^0.12.0",
+		"taze": "^0.12.1",
 		"ts-node": "^10.9.1",
 		"typescript": "^5.3.2"
 	},
 	"dependencies": {
-		"@hammerhq/logger": "^1.0.0",
+		"@hammerhq/logger": "^2.0.0",
 		"axios": "^1.6.2",
 		"discord.js": "^14.14.1",
 		"lodash.get": "^4.4.2",

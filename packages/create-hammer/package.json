@@ -1,7 +1,7 @@
 {
 	"name": "create-hammer",
 	"description": "Create Hammer apps/plugins with ease!",
-	"version": "1.0.2",
+	"version": "2.0.0",
 	"author": "Barış DEMİRCİ <hi@338.rocks>",
 	"scripts": {
 		"build": "tsup src/cli.ts --minify",
@@ -10,6 +10,9 @@
 		"prepublishOnly": "npm run clean && npm run build",
 		"update": "taze latest -w",
 		"format": "prettier --write ."
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"bin": {
 		"create-hammer": "dist/cli.js"

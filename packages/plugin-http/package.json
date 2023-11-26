@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/plugin-http",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "😎 HTTP Plugin for Hammer",
 	"main": "dist",
 	"typings": "dist",
@@ -32,14 +32,14 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hammerhq/core": "^1.0.0",
-		"@hammerhq/logger": "^1.0.0",
+		"@hammerhq/core": "^2.0.0",
+		"@hammerhq/logger": "^2.0.0",
 		"express": "^4.18.2",
 		"reflect-metadata": "^0.1.13"
 	},
 	"devDependencies": {
 		"@types/express": "^4.17.21",
-		"@types/node": "^20.9.3",
+		"@types/node": "^20.10.0",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.3.2"
 	}

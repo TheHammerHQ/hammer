@@ -1,4 +1,4 @@
-# @hammerhq/plugin-commands
+# @hammerhq/hargs
 
 ## 2.0.0
 
@@ -12,21 +12,3 @@
         -   Consumers now can install 3rd party plugins and bots using `hammer install <name>` command!
     -   Created `@hammerhq/hargs` package to parse command line arguments
     -   Created `@hammerhq/cli-tool` package to create cli tools with ease
-
-### Patch Changes
-
--   Updated dependencies
-    -   @hammerhq/logger@2.0.0
-    -   @hammerhq/core@2.0.0
-
-## 1.0.0
-
-### Major Changes
-
--   Release first major version
-
-### Patch Changes
-
--   Updated dependencies
-    -   @hammerhq/logger@1.0.0
-    -   @hammerhq/core@1.0.0

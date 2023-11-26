@@ -1,4 +1,4 @@
-# @hammerhq/plugin-commands
+# @hammerhq/cli-tool
 
 ## 2.0.0
 
@@ -16,17 +16,4 @@
 ### Patch Changes
 
 -   Updated dependencies
-    -   @hammerhq/logger@2.0.0
-    -   @hammerhq/core@2.0.0
-
-## 1.0.0
-
-### Major Changes
-
--   Release first major version
-
-### Patch Changes
-
--   Updated dependencies
-    -   @hammerhq/logger@1.0.0
-    -   @hammerhq/core@1.0.0
+    -   @hammerhq/hargs@2.0.0
