@@ -1,5 +1,11 @@
 # @hammerhq/cli
 
+## 2.2.2
+
+### Patch Changes
+
+-   Rename folder instead of copying it
+
 ## 2.2.1
 
 ### Patch Changes

@@ -1,8 +1,8 @@
 import { Logger } from "@hammerhq/logger";
-import { existsSync, mkdirSync, statSync } from "fs";
+import { existsSync, mkdirSync, rmSync, statSync } from "fs";
 import { resolve } from "path";
 
-const logger = new Logger("[Hammer User Folder Util]:");
+const logger = new Logger("[Hammer Folder Util]:");
 
 export function createFolder(folder: string) {
 	logger.event(`Checking if ${folder} exists...`);
@@ -14,6 +14,25 @@ export function createFolder(folder: string) {
 			mkdirSync(folder);
 		} catch (error) {
 			logger.error(`Failed to create ${folder}:`, error);
+
+			process.exit(1);
+		}
+	}
+}
+
+export function deleteFolder(folder: string) {
+	logger.event(`Checking if ${folder} exists...`);
+
+	if (existsSync(folder) && statSync(folder).isDirectory()) {
+		logger.event(`Deleting ${folder}...`);
+
+		try {
+			rmSync(folder, {
+				recursive: true,
+				force: true,
+			});
+		} catch (error) {
+			logger.error(`Failed to delete ${folder}:`, error);
 
 			process.exit(1);
 		}

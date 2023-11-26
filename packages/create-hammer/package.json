@@ -1,7 +1,7 @@
 {
 	"name": "create-hammer",
 	"description": "Create Hammer apps/plugins with ease!",
-	"version": "2.1.2",
+	"version": "2.1.3",
 	"author": "Barış DEMİRCİ <hi@338.rocks>",
 	"scripts": {
 		"build": "tsup src/cli.ts --minify",

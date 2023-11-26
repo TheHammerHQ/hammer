@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.1.3
+
+### Patch Changes
+
+-   Update dependencies
+
 ## 2.1.2
 
 ### Patch Changes

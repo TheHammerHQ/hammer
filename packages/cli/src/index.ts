@@ -3,9 +3,9 @@
 import { tool } from "@hammerhq/cli-tool";
 import { Logger } from "@hammerhq/logger";
 import { execSync } from "child_process";
-import { cpSync, readFileSync, rmSync, writeFileSync } from "fs";
+import { readFileSync, renameSync, rmSync, writeFileSync } from "fs";
 import { resolve } from "path";
-import { createFolder, createUserFolder } from "./utils/createUserFolder";
+import { createUserFolder, deleteFolder } from "./utils/folder";
 
 const logger = new Logger("[Hammer CLI]:");
 
@@ -89,20 +89,20 @@ tool.createCommand(
 		}
 		logger.success("Plugin built.");
 
-		logger.event("Copying plugin to user folder...");
+		logger.event("Move plugin to user folder...");
 		try {
-			createFolder(resolve(folders.userFolder, plugin));
+			deleteFolder(resolve(folders.userFolder, plugin));
 
-			cpSync(
+			renameSync(
 				resolve(folders.tempUserFolder, plugin, "dist"),
 				resolve(folders.userFolder, plugin),
 			);
 		} catch (error) {
-			logger.error("Failed to copy plugin:", error);
+			logger.error("Failed to move plugin:", error);
 
 			process.exit(1);
 		}
-		logger.success("Plugin copied.");
+		logger.success("Plugin moved.");
 
 		logger.event("Adding dependencies to package.json...");
 		try {
