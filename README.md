@@ -38,6 +38,10 @@ Hammer is still in development, you can join waitlist [here](https://hammer.338.
 -   [x] Use services for loading controllers in plugin-http
 -   [ ] see whats wrong with sequelize package, it doesnt see downloaded drivers.
 -   [ ] Increase the stability of the core package
+-   [x] Notify user to run `npm run update` command after creating a new plugin or bot
+-   [x] Automaticly run `npm run update` command after creating a new plugin or bot
+-   [ ] Add more documentation
+    -   Convert this repo from a public bot to a framework!
 
 # Looking For Contributors
 
