@@ -1,0 +1,52 @@
+{
+	"name": "@hammerhq/cli-tool",
+	"version": "1.0.0",
+	"description": "✨ A simple CLI commander system",
+	"main": "dist",
+	"typings": "dist",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheHammerHQ/hammer"
+	},
+	"author": {
+		"email": "hi@338.rocks",
+		"name": "Barış DEMİRCİ",
+		"url": "https://338.rocks"
+	},
+	"license": "GPL-3.0",
+	"private": false,
+	"keywords": [
+		"hammer",
+		"cli",
+		"commander",
+		"cli-commander",
+		"command-line-interface",
+		"command-line",
+		"args",
+		"arg",
+		"argument",
+		"parser",
+		"parse",
+		"argv",
+		"parsing",
+		"argument-parser",
+		"arguments",
+		"argv-parser"
+	],
+	"scripts": {
+		"prebuild": "rimraf dist",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@hammerhq/hargs": "^1.0.0",
+		"colors": "^1.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.9.3",
+		"rimraf": "^5.0.5",
+		"typescript": "^5.3.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
