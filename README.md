@@ -1,3 +1,5 @@
+TODO: check build steps for http plugin
+
 <p align="center">
     <img src="https://avatars.githubusercontent.com/u/109850261" alt="Logo" width="160" height="160" />
     <h3 align="center">Hammer Framework</h3>

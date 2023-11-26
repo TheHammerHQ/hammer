@@ -1,5 +1,17 @@
 # @hammerhq/plugin-sequelize
 
+## 2.2.0
+
+### Minor Changes
+
+-   Using tsup for build
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @hammerhq/logger@2.2.0
+    -   @hammerhq/core@2.2.0
+
 ## 2.1.0
 
 ### Minor Changes

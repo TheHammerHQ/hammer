@@ -1,4 +1,4 @@
-import { IEventOptions, ILoadable } from "../../types";
+import type { IEventOptions, ILoadable } from "../../types/index.d.ts";
 import { getClient } from "../../utils/client";
 import { logger } from "../../utils/globals";
 

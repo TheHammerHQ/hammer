@@ -8,9 +8,9 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@hammerhq/core": "^2.1.0",
-		"@hammerhq/localization": "^2.1.0",
-		"@hammerhq/logger": "^2.1.0",
+		"@hammerhq/core": "^2.2.0",
+		"@hammerhq/localization": "^2.2.0",
+		"@hammerhq/logger": "^2.2.0",
 		"discord.js": "^14.14.1"
 	},
 	"devDependencies": {

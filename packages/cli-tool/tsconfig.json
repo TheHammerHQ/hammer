@@ -7,7 +7,6 @@
 		"target": "ESNext",
 		"outDir": "./dist",
 		"baseUrl": "./",
-		"incremental": true,
 		"moduleResolution": "NodeNext",
 		"esModuleInterop": true,
 		"strict": true,

@@ -1,5 +1,17 @@
 # @hammerhq/cli
 
+## 2.4.0
+
+### Minor Changes
+
+-   Using tsup for build
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @hammerhq/cli-tool@2.3.0
+    -   @hammerhq/logger@2.2.0
+
 ## 2.3.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
-import { Config, Service } from "@hammerhq/core/dist";
-import { IHTTPPluginOptions } from "src/types";
+import { Config, Service } from "@hammerhq/core";
 import { bootstrap } from "../Bootstrap";
+import type { IHTTPPluginOptions } from "../types.d.ts";
 
 @Service({})
 export class HTTPService {

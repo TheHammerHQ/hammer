@@ -1,52 +1,3 @@
-import { NextFunction, Request, Response } from "express";
-
-export enum EHTTPServiceType {
-	CONTROLLER = "http-controller",
-}
-
-export interface IHTTPPluginOptions {
-	port: number;
-	controllers: any[];
-}
-
-export type TMiddlewareFunction = (
-	request: Request,
-	response: Response,
-	next: NextFunction,
-) => any;
-
-export type TMethods =
-	| "get"
-	| "post"
-	| "put"
-	| "delete"
-	| "patch"
-	| "options"
-	| "head"
-	| "all";
-
-export interface IRoute {
-	method: TMethods;
-	path?: string;
-	middlewares: TMiddlewareFunction[];
-	propertyKey: string | symbol;
-}
-
-export interface IParam<T, K extends boolean> {
-	index: number;
-	propertyKey: string | symbol;
-	type: string;
-	data: K extends true ? T : T | undefined;
-}
-
-export interface APIRes<T> {
-	statusCode: HTTPStatus;
-	message: string;
-	error?: string;
-	data: T;
-	[prop: string]: unknown;
-}
-
 export enum HTTPStatus {
 	CONTINUE = 100,
 	SWITCHING_PROTOCOLS = 101,
@@ -111,4 +62,8 @@ export enum HTTPStatus {
 	NOT_EXTENDED = 510,
 	NETWORK_AUTHENTICATION_REQUIRED = 511,
 	NETWORK_CONNECT_TIMEOUT_ERROR = 599,
+}
+
+export enum EHTTPServiceType {
+	CONTROLLER = "http-controller",
 }

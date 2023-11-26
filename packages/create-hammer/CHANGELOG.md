@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.3.0
+
+### Minor Changes
+
+-   Using tsup for build
+
 ## 2.2.0
 
 ### Minor Changes

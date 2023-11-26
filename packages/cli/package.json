@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/cli",
-	"version": "2.3.0",
+	"version": "2.4.0",
 	"description": "✨ Hammer CLI used to install and manage Hammer packages.",
 	"main": "dist",
 	"typings": "dist",
@@ -22,8 +22,7 @@
 		"hammer": "dist/index.js"
 	},
 	"scripts": {
-		"prebuild": "rimraf dist",
-		"build": "tsc"
+		"build": "tsup"
 	},
 	"keywords": [
 		"hammer",
@@ -32,12 +31,12 @@
 		"plugin"
 	],
 	"dependencies": {
-		"@hammerhq/cli-tool": "^2.2.0",
-		"@hammerhq/logger": "^2.1.0"
+		"@hammerhq/cli-tool": "^2.3.0",
+		"@hammerhq/logger": "^2.2.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.0",
-		"rimraf": "^5.0.5",
+		"tsup": "^8.0.1",
 		"typescript": "^5.3.2"
 	}
 }

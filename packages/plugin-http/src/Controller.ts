@@ -1,4 +1,4 @@
-import { EHTTPServiceType } from "./types";
+import { EHTTPServiceType } from "./enums";
 
 export const Controller = (prefix?: string) => {
 	const decorator: ClassDecorator = (target) => {

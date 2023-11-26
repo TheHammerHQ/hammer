@@ -1,14 +1,21 @@
 import fs from "fs";
 import path from "path";
 import yaml from "yaml";
-import {
-	I18nArgs,
-	I18nConstants,
-	I18nFile,
-	I18nOptions,
-	I18nString,
-	I18nToJSON,
-} from "./types";
+
+export interface I18nOptions {
+	directory?: string;
+	defaultLocale: string;
+}
+
+export interface I18nToJSON {
+	constants?: I18nConstants;
+	[key: string]: unknown;
+}
+
+export type I18nConstants = { [param: string]: string };
+export type I18nArgs = { [param: string]: string };
+export type I18nString = { [param: string]: string };
+export type I18nFile = Map<string, I18nString>;
 
 export class I18n {
 	private locales = new Map<string, I18nFile>();

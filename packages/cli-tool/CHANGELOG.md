@@ -1,5 +1,16 @@
 # @hammerhq/cli-tool
 
+## 2.3.0
+
+### Minor Changes
+
+-   Using tsup for build
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @hammerhq/hargs@2.3.0
+
 ## 2.2.0
 
 ### Minor Changes

@@ -1,11 +1,14 @@
+import "reflect-metadata";
+
 import { defineConfig, Plugin } from "@hammerhq/core";
 import { CommandsService } from "./commands.service";
 import { InteractionCreateEvent } from "./interactionCreate.event";
-import { ICommandsPluginOptions } from "./types";
+import type { ICommandsPluginOptions } from "./types.d.ts";
 
 export * from "./Command";
 export * from "./commands.service";
-export * from "./types";
+export * from "./enums";
+export type * from "./types.d.ts";
 
 @Plugin({
 	services: [CommandsService],

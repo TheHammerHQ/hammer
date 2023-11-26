@@ -1,4 +1,4 @@
-import { IRoute, TMethods } from "./types";
+import type { IRoute, TMethods } from "./types.d.ts";
 
 export const Method = (method: TMethods) => {
 	const factory = (path?: string) => {

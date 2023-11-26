@@ -1,4 +1,5 @@
-import { ELoadableTypes, ILoadable } from "../types";
+import { ELoadableTypes } from "src";
+import type { ILoadable } from "../types/index.d.ts";
 
 export const checkType = (loadable: ILoadable, type: ELoadableTypes) => {
 	const t = Reflect.getMetadata("type", loadable);

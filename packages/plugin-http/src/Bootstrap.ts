@@ -1,8 +1,9 @@
 import { ILoadable, serviceCache } from "@hammerhq/core";
 import express, { json, urlencoded } from "express";
-import { createServer, Server } from "http";
+import { Server, createServer } from "http";
+import { HTTPStatus } from "./enums";
 import { controllerCache, logger } from "./global";
-import { APIRes, HTTPStatus, IParam, IRoute } from "./types";
+import type { APIRes, IParam, IRoute } from "./types.d.ts";
 import { setServer } from "./utils/server";
 
 export const bootstrap = async (

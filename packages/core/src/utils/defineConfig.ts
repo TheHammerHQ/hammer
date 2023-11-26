@@ -1,4 +1,4 @@
-import { ILoadable } from "../types";
+import type { ILoadable } from "../types/index.d.ts";
 import { configCache } from "./globals";
 
 export const defineConfig = <T>(loadable: ILoadable, config: T) =>

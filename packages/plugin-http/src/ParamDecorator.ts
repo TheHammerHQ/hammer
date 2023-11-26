@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { IParam } from "./types";
+import type { IParam } from "./types.d.ts";
 
 export const ParamDecorator = <T, K extends boolean>(type: string) => {
 	const factory = (data: T) => {

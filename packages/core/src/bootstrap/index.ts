@@ -1,5 +1,5 @@
 import { I18n } from "@hammerhq/localization";
-import { IBootstrapOptions } from "../types";
+import type { IBootstrapOptions } from "../types/index.d.ts";
 import { setClient } from "../utils/client";
 import {
 	eventCache,

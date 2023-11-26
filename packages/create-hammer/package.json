@@ -1,9 +1,9 @@
 {
 	"name": "create-hammer",
 	"description": "Create Hammer apps/plugins with ease!",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"bin": {
-		"create-hammer": "dist/cli.js"
+		"create-hammer": "dist/index.js"
 	},
 	"main": "dist",
 	"typings": "dist",
@@ -22,12 +22,8 @@
 		"access": "public"
 	},
 	"scripts": {
-		"build": "tsup src/cli.ts --minify",
-		"clean": "rimraf dist",
-		"dev": "tsup src/cli.ts --watch",
-		"prepublishOnly": "npm run clean && npm run build",
-		"update": "taze latest -w",
-		"format": "prettier --write ."
+		"prebuild": "rimraf dist",
+		"build": "tsup"
 	},
 	"files": [
 		"dist",

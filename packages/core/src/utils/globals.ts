@@ -1,5 +1,5 @@
 import { Logger } from "@hammerhq/logger";
-import { ILoadable } from "../types";
+import type { ILoadable } from "../types/index.d.ts";
 
 export const logger = new Logger("[CORE]:");
 

@@ -1,4 +1,5 @@
-import { ELoadableTypes, ILoadable } from "../../types";
+import { ELoadableTypes } from "src";
+import type { ILoadable } from "../../types/index.d.ts";
 import { checkType } from "../../utils/checkType";
 import { logger, serviceCache } from "../../utils/globals";
 

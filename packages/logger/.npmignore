@@ -4,3 +4,4 @@ CHANGELOG.md
 .npmignore
 *lock*
 *png*
+*tsup*

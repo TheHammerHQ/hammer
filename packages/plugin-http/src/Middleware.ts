@@ -1,4 +1,4 @@
-import { IRoute, TMiddlewareFunction } from "./types";
+import type { IRoute, TMiddlewareFunction } from "./types.d.ts";
 
 export const Middlewate = (middleware: TMiddlewareFunction) => {
 	const decorator: PropertyDecorator = (target, propertKey) => {

@@ -7,8 +7,9 @@ import {
 	serviceCache,
 } from "@hammerhq/core";
 import { Logger as HammerLogger } from "@hammerhq/logger";
-import { Client as DJSClient, Collection, REST, Routes } from "discord.js";
-import { ECommandType, ICommandOptions, ICommandsPluginOptions } from "./types";
+import { Collection, Client as DJSClient, REST, Routes } from "discord.js";
+import { ECommandType } from "./enums";
+import type { ICommandOptions, ICommandsPluginOptions } from "./types.d.ts";
 
 @Service({})
 export class CommandsService {

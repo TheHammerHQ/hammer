@@ -1,4 +1,5 @@
-import { ELoadableTypes, IEventOptions, ILoadable } from "../../types";
+import { ELoadableTypes } from "src";
+import type { IEventOptions, ILoadable } from "../../types/index.d.ts";
 import { checkType } from "../../utils/checkType";
 import { eventCache, logger, serviceCache } from "../../utils/globals";
 

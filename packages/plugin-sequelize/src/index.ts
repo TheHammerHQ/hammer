@@ -10,7 +10,7 @@ export class SequelizePlugin {
 	@Logger("[SequelizePlugin]:")
 	logger!: HammerLogger;
 
-	public static forFeature(options: SequelizeOptions) {
+	public static forRoot(options: SequelizeOptions) {
 		const sequelize = new Sequelize(options);
 		setSequelize(sequelize);
 

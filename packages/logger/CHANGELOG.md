@@ -1,5 +1,11 @@
 # @hammerhq/logger
 
+## 2.2.0
+
+### Minor Changes
+
+-   Using tsup for build
+
 ## 2.1.0
 
 ### Minor Changes
