@@ -8,6 +8,12 @@ const templateRoot = resolve(__dirname, "..", "templates");
 
 // See https://github.com/uetchy/create-create-app/blob/master/README.md for other options.
 
+const caveat = `
+	Your Hammer project is ready to rock! 🚀
+
+	Don't forget to regularly update your dependencies by running \`npm run update\` in your project directory!
+`;
+
 create("create-hammer", {
 	templateRoot,
 	defaultDescription: "A simple Hammer app",
@@ -26,12 +32,9 @@ create("create-hammer", {
 
 		execSync("npm run update", {
 			cwd: packageDir,
+			stdio: "inherit",
 		});
 
-		return `
-			Your Hammer project is ready to rock! 🚀
-			
-			Don't forget to regularly update your dependencies by running \`npm run update\` in your project directory!
-		`;
+		return caveat;
 	},
 });

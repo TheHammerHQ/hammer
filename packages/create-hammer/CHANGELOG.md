@@ -1,5 +1,11 @@
 # create-hammer
 
+## 2.0.2
+
+### Patch Changes
+
+-   Pipe logs to current terminal instance while running update command
+
 ## 2.0.1
 
 ### Patch Changes
