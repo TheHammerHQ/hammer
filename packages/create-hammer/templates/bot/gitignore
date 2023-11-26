@@ -1,0 +1,8 @@
+node_modules
+dist
+*lock*
+*env*
+*yarn*
+*debug*
+*err*
+*log*
