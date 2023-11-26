@@ -1,5 +1,11 @@
 # @hammerhq/cli
 
+## 2.2.1
+
+### Patch Changes
+
+-   Create plugin directory first
+
 ## 2.2.0
 
 ### Minor Changes

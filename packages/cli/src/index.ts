@@ -5,7 +5,7 @@ import { Logger } from "@hammerhq/logger";
 import { execSync } from "child_process";
 import { cpSync, readFileSync, rmSync, writeFileSync } from "fs";
 import { resolve } from "path";
-import { createUserFolder } from "./utils/createUserFolder";
+import { createFolder, createUserFolder } from "./utils/createUserFolder";
 
 const logger = new Logger("[Hammer CLI]:");
 
@@ -91,6 +91,8 @@ tool.createCommand(
 
 		logger.event("Copying plugin to user folder...");
 		try {
+			createFolder(resolve(folders.userFolder, plugin));
+
 			cpSync(
 				resolve(folders.tempUserFolder, plugin, "dist"),
 				resolve(folders.userFolder, plugin),

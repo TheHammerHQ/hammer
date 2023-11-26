@@ -4,7 +4,7 @@ import { resolve } from "path";
 
 const logger = new Logger("[Hammer User Folder Util]:");
 
-function createFolder(folder: string) {
+export function createFolder(folder: string) {
 	logger.event(`Checking if ${folder} exists...`);
 
 	if (!existsSync(folder) || !statSync(folder).isDirectory()) {
