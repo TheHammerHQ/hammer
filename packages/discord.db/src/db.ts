@@ -1,7 +1,7 @@
 import { Logger } from "@hammerhq/logger";
 import axios from "axios";
 import { AttachmentBuilder, Client, TextBasedChannel } from "discord.js";
-import { get, has, set, unset } from "./lodash";
+import { get, has, set, unset } from "lodash";
 
 export interface ITableOptions {
 	channelId: string;

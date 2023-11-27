@@ -1,6 +1,6 @@
 {
 	"name": "@hammerhq/plugin-http",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"description": "😎 HTTP Plugin for Hammer",
 	"main": "dist",
 	"typings": "dist",
@@ -19,7 +19,6 @@
 		"access": "public"
 	},
 	"scripts": {
-		"prebuild": "rimraf dist",
 		"build": "tsup"
 	},
 	"keywords": [

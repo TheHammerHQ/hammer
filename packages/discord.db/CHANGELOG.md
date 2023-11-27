@@ -1,5 +1,11 @@
 # @hammerhq/discord.db
 
+## 2.2.1
+
+### Patch Changes
+
+-   Update dependencies and fix scripts
+
 ## 2.2.0
 
 ### Minor Changes
